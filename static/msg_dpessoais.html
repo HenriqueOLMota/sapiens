@@ -1,70 +1,76 @@
-
 <!-- saved from url=(0066)https://sapiens.dti.ufv.br/sapiens/aluno/dpessoais.asp?n=524105251 -->
-<html><!-- Google tag (gtag.js) --><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script async="" src="./js"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-V5B0KG5WW5');</script>
-<title>Sapiens - Sistema de Apoio ao Ensino Baseado na Internet</title>
-<link href="./estilo.css" rel="stylesheet" type="text/css">
-<script language="JavaScript">
-<!--
+<html><!-- Google tag (gtag.js) -->
+<head>
+    <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+    <script async="" src="./js"></script>
+    <script>  window.dataLayer = window.dataLayer || [];
 
-function aviso(acaoA) {
-  if (acaoA == '0' )
-  { 
-	document.getElementById('PrimeiroAviso').style.display = 'none';
-	document.getElementById('Avisoinicial').style.display = '';
-	document.getElementById('Normal').style.display = 'none';
-  }
-  else if (acaoA == '1')  
-  { //alert("acao e um")
-	  var f3 = document.FormInicial
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-V5B0KG5WW5');</script>
+    <title>Sapiens - Sistema de Apoio ao Ensino Baseado na Internet</title>
+    <link href="./estilo.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript">
+        <!--
+
+        function aviso(acaoA) {
+            if (acaoA == '0') {
+                document.getElementById('PrimeiroAviso').style.display = 'none';
+                document.getElementById('Avisoinicial').style.display = '';
+                document.getElementById('Normal').style.display = 'none';
+            } else if (acaoA == '1') { //alert("acao e um")
+                var f3 = document.FormInicial
 //	  var f2 = document.formConfirmacao
-	  if (!f3.leu.checked)  {
-		  alert("Marque a opção de confirmação da leitura da mensagem acima antes de prosseguir !!!")
-		  return false
-	  }
-	  else
-	  {
-  		    document.getElementById('PrimeiroAviso').style.display = '';
-			document.getElementById('Avisoinicial').style.display = 'none';
-			document.getElementById('Normal').style.display = '';
+                if (!f3.leu.checked) {
+                    alert("Marque a opção de confirmação da leitura da mensagem acima antes de prosseguir !!!")
+                    return false
+                } else {
+                    document.getElementById('PrimeiroAviso').style.display = '';
+                    document.getElementById('Avisoinicial').style.display = 'none';
+                    document.getElementById('Normal').style.display = '';
 
-	  }
-  }
-}
+                }
+            }
+        }
 
-function enviar() {
-  var f1 = document.formDados
-  var f2 = document.formConfirmacao
-  if (! f2.confirmacao.checked)  {
-      alert("Marque a opção de confirmação antes de prosseguir !!!")
-      return false
-  }
+        function enviar() {
+            var f1 = document.formDados
+            var f2 = document.formConfirmacao
+            if (!f2.confirmacao.checked) {
+                alert("Marque a opção de confirmação antes de prosseguir !!!")
+                return false
+            }
 
-  if (f1.Pais_Nascimento.value != "000") {
-    f1.Estado_Nascimento.id = ""
-  }
-	
-  //Verifica campos não preenchidos
-  mensagem = ""
-  for (i=0;i<document.forms["formDados"].elements.length;i++){
-    if (document.forms["formDados"].elements[i].value == "" && document.forms["formDados"].elements[i].id != "") {
-      mensagem = mensagem + "- " + document.forms["formDados"].elements[i].id + "\n"
-	}
-  } 
-  if (mensagem != "") {
-      mensagem = "Informações pendentes:\n" + mensagem + "\n Procure o Registro Escolar."
-      alert(mensagem)
-      return false
-  }
-  
-  if (confirm("Confirma?") == false) {
-      return false
-  }
+            if (f1.Pais_Nascimento.value != "000") {
+                f1.Estado_Nascimento.id = ""
+            }
 
-  f2.acao.value = "confirmar"
-  f2.submit()
-}
--->
-</script>
+            //Verifica campos não preenchidos
+            mensagem = ""
+            for (i = 0; i < document.forms["formDados"].elements.length; i++) {
+                if (document.forms["formDados"].elements[i].value == "" && document.forms["formDados"].elements[i].id != "") {
+                    mensagem = mensagem + "- " + document.forms["formDados"].elements[i].id + "\n"
+                }
+            }
+            if (mensagem != "") {
+                mensagem = "Informações pendentes:\n" + mensagem + "\n Procure o Registro Escolar."
+                alert(mensagem)
+                return false
+            }
+
+            if (confirm("Confirma?") == false) {
+                return false
+            }
+
+            f2.acao.value = "confirmar"
+            f2.submit()
+        }
+
+        -->
+    </script>
 </head>
 
 <body onload="aviso(&#39;1&#39;)">
@@ -72,730 +78,1261 @@ function enviar() {
 
 <center>
 
-<!--
-'==================================================
-'Verifica se o sistema deve mostrar dados da confirmação ou solicitar confirmação
-'==================================================
--->
-<table width="600" border="0" align="center">
-	<tbody><tr>
-		<td align="center">
-			<font color="Gray" size="3"><b>Dados Pessoais</b></font><br>
-		</td>
-	</tr>
-</tbody></table>
+    <!--
+    '==================================================
+    'Verifica se o sistema deve mostrar dados da confirmação ou solicitar confirmação
+    '==================================================
+    -->
+    <table align="center" border="0" width="600">
+        <tbody>
+        <tr>
+            <td align="center">
+                <font color="Gray" size="3"><b>Dados Pessoais</b></font><br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
-<br>
-<table border="0" cellspacing="0" cellpadding="0">
-<tbody><tr id="PrimeiroAviso">
-<td>
-<table width="600" border="0" align="center">
-	<tbody><tr>
-		<td align="center">
-			<font color="red"><blink>Atenção: </blink></font>A alteração de seus dados pessoais somente pode ser feita no REGISTRO ESCOLAR,<br> com entrega de cópia dos documentos.<br><br>
-		</td>
-	</tr>
+    <br>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr id="PrimeiroAviso">
+            <td>
+                <table align="center" border="0" width="600">
+                    <tbody>
+                    <tr>
+                        <td align="center">
+                            <font color="red">
+                                <blink>Atenção:</blink>
+                            </font>A alteração de seus dados pessoais somente pode ser feita no REGISTRO ESCOLAR,<br>
+                            com entrega de cópia dos documentos.<br><br>
+                        </td>
+                    </tr>
 
-</tbody></table>
-</td>
-</tr>
-<!-- Nome e Matrícula -->
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- Nome e Matrícula -->
 
-<tr id="Avisoinicial">
-<td>
+        <tr id="Avisoinicial">
+            <td>
 
-</td></tr><tr id="Normal">
-<td>
-<form name="formDados" action="https://sapiens.dti.ufv.br/sapiens/aluno/dpessoais.asp" method="POST">
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table width="100%" border="0" cellspacing="4" cellpadding="0">
-	
-		<tbody><tr>
-			<td width="90">&nbsp;<b>Nome</b></td>
-			<td align="right"><b>Matrícula</b>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="90" align="left">&nbsp;<input type="Text" name="Nome" value="Vinícius Sant Unioni Ângelo Vargas" size="62" readonly=""></td>
-			<td align="right"><font size="3">83109</font>&nbsp;</td>
-		</tr>
-	
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+            </td>
+        </tr>
+        <tr id="Normal">
+            <td>
+                <form action="https://sapiens.dti.ufv.br/sapiens/aluno/dpessoais.asp" method="POST" name="formDados">
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4" width="100%">
 
-<!-- Curso -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="4">&nbsp;<b>Curso</b></td>
-		</tr>
-		<tr>
-			<td width="30" align="LEFT"><font size="2">&nbsp;Curso:&nbsp;</font></td>
-			<td align="LEFT"><input type="Text" name="Nome_Curso" value="Mestrado em Física" size="60" readonly=""></td>
-		</tr>
-		<tr>
-			<td width="30" align="LEFT"><font size="2">&nbsp;Título:&nbsp;</font></td>
-			<td align="LEFT"><input type="Text" name="Titulo_Curso" value="Magister Scientiae em Física                                                                        " size="60" readonly=""></td>
-		</tr>
-		<tr>
-			<td width="30" align="LEFT"><font size="2">&nbsp;Habilitação:&nbsp;</font></td>
-			<td align="LEFT"><input type="Text" name="Habilitacao" value="                                                                                                    " size="60" readonly=""></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>	
+                                    <tbody>
+                                    <tr>
+                                        <td width="90">&nbsp;<b>Nome</b></td>
+                                        <td align="right"><b>Matrícula</b>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" width="90">&nbsp;<input name="Nome" readonly=""
+                                                                                 size="62"
+                                                                                 type="Text" value="Vinícius Sant Unioni Ângelo Vargas"></td>
+                                        <td align="right"><font size="3">83109</font>&nbsp;</td>
+                                    </tr>
 
-<!-- Filiação -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="4">&nbsp;<b>Filiação</b></td>
-		</tr>
-		<tr>
-			<td width="30" align="LEFT"><font size="2">&nbsp;Pai:&nbsp;</font></td>
-			<td align="LEFT"><input type="Text" name="Nome_Pai" value="João Vargas de Castro" size="56" readonly=""></td>
-		</tr>
-		<tr>
-			<td width="30" align="LEFT"><font size="2">&nbsp;Mãe:&nbsp;</font></td>
-			<td align="LEFT"><input type="Text" name="Nome_Mae" value="Aparecida de Fátima Ângelo Castro" size="56" readonly="" id="Nome da mãe"></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>	
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<!-- Nascimento -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="5">&nbsp;<b>Nascimento</b></td>
-		</tr>
-		<tr>
-			<td width="70" align="RIGHT"><font size="2">Data:</font></td>
-			<td width="260" align="LEFT"><input type="Text" name="Data_Nascimento" value="06/09/1995" size="10" readonly="" id="Data de nascimento"></td>
-			<td width="280" align="RIGHT" colspan="2"><font size="2">Cidade:</font><input type="Text" name="Local_Nascimento" value="Carangola" size="30" readonly="" id="Local de nascimento"></td>
-			<td width="90" align="RIGHT"><font size="2">UF:</font>
-				<select name="Estado_Nascimento" id="UF de nascimento" onchange="this.options[0].selected = true;">
-		        <option value="MG" selected="">MG
-	          	  </option><option value="">
-	          	  </option><option value="AC">AC
-	          	  </option><option value="AL">AL
-	          	  </option><option value="AM">AM
-	          	  </option><option value="AP">AP
-	          	  </option><option value="BA">BA
-	          	  </option><option value="CE">CE
-	          	  </option><option value="DF">DF
-	          	  </option><option value="ES">ES
-	          	  </option><option value="GO">GO
-	          	  </option><option value="MA">MA
-	          	  </option><option value="MG">MG
-	          	  </option><option value="MS">MS
-	          	  </option><option value="MT">MT
-	          	  </option><option value="PA">PA
-	          	  </option><option value="PB">PB
-	          	  </option><option value="PE">PE
-	          	  </option><option value="PI">PI
-	          	  </option><option value="PR">PR
-	          	  </option><option value="RJ">RJ
-	          	  </option><option value="RN">RN
-	          	  </option><option value="RO">RO
-	          	  </option><option value="RR">RR
-	          	  </option><option value="RS">RS
-	          	  </option><option value="SC">SC
-	          	  </option><option value="SE">SE
-	          	  </option><option value="SP">SP
-	          	  </option><option value="TO">TO
-	          	  </option><option value="ZZ">ZZ
-				</option></select>
-			</td>
-		</tr>
-		<tr>
-			<td width="70" align="RIGHT"><font size="2">País:</font></td>
-			<td width="260" align="LEFT">
-				<select name="Pais_Nascimento" id="País de nascimento" onchange="this.options[0].selected = true;">
-		        <option value="000" selected="">Brasil
-	          	  </option><option value="000">Brasil
-	          	  </option><option value="005">Açores
-	          	  </option><option value="010">Afeganistão
-	          	  </option><option value="015">África do Sul
-	          	  </option><option value="020">Alemanha
-	          	  </option><option value="025">Alto Volta
-	          	  </option><option value="030">Andorra
-	          	  </option><option value="035">Angola
-	          	  </option><option value="040">Antilhas Holandesas
-	          	  </option><option value="045">Arábia Saudita
-	          	  </option><option value="050">Argélia
-	          	  </option><option value="055">Argentina
-	          	  </option><option value="060">Austrália
-	          	  </option><option value="065">Áustria
-	          	  </option><option value="070">Bahamas
-	          	  </option><option value="075">Bahrein
-	          	  </option><option value="080">Bangladesh
-	          	  </option><option value="085">Barbados
-	          	  </option><option value="090">Bélgica
-	          	  </option><option value="095">Belize
-	          	  </option><option value="100">Benin
-	          	  </option><option value="105">Bermuda
-	          	  </option><option value="110">Birmania
-	          	  </option><option value="115">Bolívia
-	          	  </option><option value="120">Botsuana
-	          	  </option><option value="125">Bulgária
-	          	  </option><option value="130">Burundi
-	          	  </option><option value="132">Cabo Verde
-	          	  </option><option value="135">Ilhas Caimanes
-	          	  </option><option value="140">Camarões
-	          	  </option><option value="145">Camboja
-	          	  </option><option value="150">Canadá
-	          	  </option><option value="155">Ilhas Canárias
-	          	  </option><option value="160">Ceilao
-	          	  </option><option value="165">Chile
-	          	  </option><option value="170">Chipre
-	          	  </option><option value="175">Cingapura
-	          	  </option><option value="180">Colômbia
-	          	  </option><option value="185">Congo
-	          	  </option><option value="190">Coréia do Norte
-	          	  </option><option value="192">Coréia do Sul
-	          	  </option><option value="195">Costa do Marfim
-	          	  </option><option value="200">Costa Rica
-	          	  </option><option value="205">Cuba
-	          	  </option><option value="210">Daomé
-	          	  </option><option value="215">Dinamarca
-	          	  </option><option value="220">Egito
-	          	  </option><option value="225">El Salvador
-	          	  </option><option value="230">Emirados Árabes Unid
-	          	  </option><option value="235">Equador
-	          	  </option><option value="240">Escócia
-	          	  </option><option value="245">Espanha
-	          	  </option><option value="260">Estados Unidos da América
-	          	  </option><option value="265">Etiópia
-	          	  </option><option value="270">Fidji
-	          	  </option><option value="275">Filipinas
-	          	  </option><option value="280">Finlândia
-	          	  </option><option value="285">Formosa
-	          	  </option><option value="290">França
-	          	  </option><option value="295">Gabão
-	          	  </option><option value="300">Gâmbia
-	          	  </option><option value="305">Gana
-	          	  </option><option value="310">Grécia
-	          	  </option><option value="320">Guatemala
-	          	  </option><option value="325">Guiana
-	          	  </option><option value="330">Guiana Francesa
-	          	  </option><option value="335">Guine
-	          	  </option><option value="340">Guiné-Bissau
-	          	  </option><option value="345">Guine Equatorial
-	          	  </option><option value="350">Haiti
-	          	  </option><option value="352">Holanda
-	          	  </option><option value="355">Honduras
-	          	  </option><option value="771">Estônia
-	          	  </option><option value="772">Eslovênia
-	          	  </option><option value="360">Hong Kong
-	          	  </option><option value="365">Ieman
-	          	  </option><option value="370">Ieman do Sul
-	          	  </option><option value="375">Índia
-	          	  </option><option value="380">Indonésia
-	          	  </option><option value="382">Inglaterra
-	          	  </option><option value="385">Irã
-	          	  </option><option value="390">Iraque
-	          	  </option><option value="395">Irlanda
-	          	  </option><option value="397">Irlanda do Norte
-	          	  </option><option value="400">Islândia
-	          	  </option><option value="405">Israel
-	          	  </option><option value="410">Itália
-	          	  </option><option value="415">Iugoslávia
-	          	  </option><option value="420">Jamaica
-	          	  </option><option value="425">Japão
-	          	  </option><option value="430">Jordânia
-	          	  </option><option value="435">Kuwait
-	          	  </option><option value="440">Laos
-	          	  </option><option value="445">Líbano
-	          	  </option><option value="450">Libéria
-	          	  </option><option value="455">Líbia
-	          	  </option><option value="460">Luxemburgo
-	          	  </option><option value="465">Madagascar
-	          	  </option><option value="470">Malásia
-	          	  </option><option value="475">Malawi
-	          	  </option><option value="480">Mali
-	          	  </option><option value="485">Malta
-	          	  </option><option value="490">Marrocos
-	          	  </option><option value="495">Mauricio
-	          	  </option><option value="500">Mauritânia
-	          	  </option><option value="505">México
-	          	  </option><option value="510">Moçambique
-	          	  </option><option value="515">Mongólia
-	          	  </option><option value="520">Namibia
-	          	  </option><option value="525">Nepal
-	          	  </option><option value="530">Nicarágua
-	          	  </option><option value="535">Niger
-	          	  </option><option value="540">Nigéria
-	          	  </option><option value="545">Noruega
-	          	  </option><option value="550">Nova Guine
-	          	  </option><option value="555">Nova Zelândia
-	          	  </option><option value="560">Okinawa
-	          	  </option><option value="565">Oman
-	          	  </option><option value="570">Países Baixos
-	          	  </option><option value="575">Panamá
-	          	  </option><option value="580">Paquistão
-	          	  </option><option value="585">Paraguai
-	          	  </option><option value="590">Peru
-	          	  </option><option value="595">Polônia
-	          	  </option><option value="598">Porto Rico
-	          	  </option><option value="600">Portugal
-	          	  </option><option value="605">Qatar
-	          	  </option><option value="610">Quênia
-	          	  </option><option value="615">Reino Unido
-	          	  </option><option value="620">República Centro-Afr
-	          	  </option><option value="625">República Dominicana
-	          	  </option><option value="630">República Popular da
-	          	  </option><option value="632">São Tomé e Príncipe
-	          	  </option><option value="635">Rodésia
-	          	  </option><option value="640">Ruanda
-	          	  </option><option value="650">Somoa Ocidental
-	          	  </option><option value="655">Senegal
-	          	  </option><option value="660">Serra Leoa
-	          	  </option><option value="665">Síria
-	          	  </option><option value="670">Suazilândia
-	          	  </option><option value="675">Sudão
-	          	  </option><option value="680">Suécia
-	          	  </option><option value="685">Suíça
-	          	  </option><option value="690">Suriname
-	          	  </option><option value="695">Tailândia
-	          	  </option><option value="700">Taiti
-	          	  </option><option value="705">Tanzânia
-	          	  </option><option value="710">Tchad
-	          	  </option><option value="715">Tago
-	          	  </option><option value="720">Tonga Ilhas
-	          	  </option><option value="725">Trinidad e Tobago
-	          	  </option><option value="730">Tunísia
-	          	  </option><option value="735">Turquia
-	          	  </option><option value="740">Uganda
-	          	  </option><option value="745">Uruguai
-	          	  </option><option value="750">Venezuela
-	          	  </option><option value="755">Vietnam
-	          	  </option><option value="760">Wales
-	          	  </option><option value="765">República Democrática do Congo
-	          	  </option><option value="770">Zâmbia
-	          	  </option><option value="999">NÃO INFORMADO
-	          	  </option><option value="775">China
-	          	  </option><option value="624">República da Sérvia
-	          	  </option><option value="362">Hungria
-	          	  </option><option value="457">Lituânia
-	          	  </option><option value="642">Rússia
-	          	  </option><option value="711">Sérvia
-	          	  </option><option value="776">República da Croácia
-	          	  </option><option value="123">Burkina Faso
-	          	  </option><option value="853">Macau
-	          	  </option><option value="781">Togo
-	          	  </option><option value="831">Ucrânia
-	          	  </option><option value="790">Republique de Côte D'Ivoire
-	          	  </option><option value="631">República Tcheca
-	          	  </option><option value="780">Zimbábue
-	          	  </option><option value="27">Sri Lanka
-	          	  </option><option value="122">Lesoto
-				</option></select>
-			</td>
-			<td width="70" align="RIGHT"><font size="2">Nacionalidade:</font></td>
-			<td width="210" align="LEFT">
-				<select name="Nacionalidade" id="Nacionalidade" onchange="this.options[0].selected = true;">
-		        <option value="000" selected="">Brasil
-	          	  </option><option value="000">Brasil
-	          	  </option><option value="005">Açores
-	          	  </option><option value="010">Afeganistão
-	          	  </option><option value="015">África do Sul
-	          	  </option><option value="020">Alemanha
-	          	  </option><option value="025">Alto Volta
-	          	  </option><option value="030">Andorra
-	          	  </option><option value="035">Angola
-	          	  </option><option value="040">Antilhas Holandesas
-	          	  </option><option value="045">Arábia Saudita
-	          	  </option><option value="050">Argélia
-	          	  </option><option value="055">Argentina
-	          	  </option><option value="060">Austrália
-	          	  </option><option value="065">Áustria
-	          	  </option><option value="070">Bahamas
-	          	  </option><option value="075">Bahrein
-	          	  </option><option value="080">Bangladesh
-	          	  </option><option value="085">Barbados
-	          	  </option><option value="090">Bélgica
-	          	  </option><option value="095">Belize
-	          	  </option><option value="100">Benin
-	          	  </option><option value="105">Bermuda
-	          	  </option><option value="110">Birmania
-	          	  </option><option value="115">Bolívia
-	          	  </option><option value="120">Botsuana
-	          	  </option><option value="125">Bulgária
-	          	  </option><option value="130">Burundi
-	          	  </option><option value="132">Cabo Verde
-	          	  </option><option value="135">Ilhas Caimanes
-	          	  </option><option value="140">Camarões
-	          	  </option><option value="145">Camboja
-	          	  </option><option value="150">Canadá
-	          	  </option><option value="155">Ilhas Canárias
-	          	  </option><option value="160">Ceilao
-	          	  </option><option value="165">Chile
-	          	  </option><option value="170">Chipre
-	          	  </option><option value="175">Cingapura
-	          	  </option><option value="180">Colômbia
-	          	  </option><option value="185">Congo
-	          	  </option><option value="190">Coréia do Norte
-	          	  </option><option value="192">Coréia do Sul
-	          	  </option><option value="195">Costa do Marfim
-	          	  </option><option value="200">Costa Rica
-	          	  </option><option value="205">Cuba
-	          	  </option><option value="210">Daomé
-	          	  </option><option value="215">Dinamarca
-	          	  </option><option value="220">Egito
-	          	  </option><option value="225">El Salvador
-	          	  </option><option value="230">Emirados Árabes Unid
-	          	  </option><option value="235">Equador
-	          	  </option><option value="240">Escócia
-	          	  </option><option value="245">Espanha
-	          	  </option><option value="260">Estados Unidos da América
-	          	  </option><option value="265">Etiópia
-	          	  </option><option value="270">Fidji
-	          	  </option><option value="275">Filipinas
-	          	  </option><option value="280">Finlândia
-	          	  </option><option value="285">Formosa
-	          	  </option><option value="290">França
-	          	  </option><option value="295">Gabão
-	          	  </option><option value="300">Gâmbia
-	          	  </option><option value="305">Gana
-	          	  </option><option value="310">Grécia
-	          	  </option><option value="320">Guatemala
-	          	  </option><option value="325">Guiana
-	          	  </option><option value="330">Guiana Francesa
-	          	  </option><option value="335">Guine
-	          	  </option><option value="340">Guiné-Bissau
-	          	  </option><option value="345">Guine Equatorial
-	          	  </option><option value="350">Haiti
-	          	  </option><option value="352">Holanda
-	          	  </option><option value="355">Honduras
-	          	  </option><option value="771">Estônia
-	          	  </option><option value="772">Eslovênia
-	          	  </option><option value="360">Hong Kong
-	          	  </option><option value="365">Ieman
-	          	  </option><option value="370">Ieman do Sul
-	          	  </option><option value="375">Índia
-	          	  </option><option value="380">Indonésia
-	          	  </option><option value="382">Inglaterra
-	          	  </option><option value="385">Irã
-	          	  </option><option value="390">Iraque
-	          	  </option><option value="395">Irlanda
-	          	  </option><option value="397">Irlanda do Norte
-	          	  </option><option value="400">Islândia
-	          	  </option><option value="405">Israel
-	          	  </option><option value="410">Itália
-	          	  </option><option value="415">Iugoslávia
-	          	  </option><option value="420">Jamaica
-	          	  </option><option value="425">Japão
-	          	  </option><option value="430">Jordânia
-	          	  </option><option value="435">Kuwait
-	          	  </option><option value="440">Laos
-	          	  </option><option value="445">Líbano
-	          	  </option><option value="450">Libéria
-	          	  </option><option value="455">Líbia
-	          	  </option><option value="460">Luxemburgo
-	          	  </option><option value="465">Madagascar
-	          	  </option><option value="470">Malásia
-	          	  </option><option value="475">Malawi
-	          	  </option><option value="480">Mali
-	          	  </option><option value="485">Malta
-	          	  </option><option value="490">Marrocos
-	          	  </option><option value="495">Mauricio
-	          	  </option><option value="500">Mauritânia
-	          	  </option><option value="505">México
-	          	  </option><option value="510">Moçambique
-	          	  </option><option value="515">Mongólia
-	          	  </option><option value="520">Namibia
-	          	  </option><option value="525">Nepal
-	          	  </option><option value="530">Nicarágua
-	          	  </option><option value="535">Niger
-	          	  </option><option value="540">Nigéria
-	          	  </option><option value="545">Noruega
-	          	  </option><option value="550">Nova Guine
-	          	  </option><option value="555">Nova Zelândia
-	          	  </option><option value="560">Okinawa
-	          	  </option><option value="565">Oman
-	          	  </option><option value="570">Países Baixos
-	          	  </option><option value="575">Panamá
-	          	  </option><option value="580">Paquistão
-	          	  </option><option value="585">Paraguai
-	          	  </option><option value="590">Peru
-	          	  </option><option value="595">Polônia
-	          	  </option><option value="598">Porto Rico
-	          	  </option><option value="600">Portugal
-	          	  </option><option value="605">Qatar
-	          	  </option><option value="610">Quênia
-	          	  </option><option value="615">Reino Unido
-	          	  </option><option value="620">República Centro-Afr
-	          	  </option><option value="625">República Dominicana
-	          	  </option><option value="630">República Popular da
-	          	  </option><option value="632">São Tomé e Príncipe
-	          	  </option><option value="635">Rodésia
-	          	  </option><option value="640">Ruanda
-	          	  </option><option value="650">Somoa Ocidental
-	          	  </option><option value="655">Senegal
-	          	  </option><option value="660">Serra Leoa
-	          	  </option><option value="665">Síria
-	          	  </option><option value="670">Suazilândia
-	          	  </option><option value="675">Sudão
-	          	  </option><option value="680">Suécia
-	          	  </option><option value="685">Suíça
-	          	  </option><option value="690">Suriname
-	          	  </option><option value="695">Tailândia
-	          	  </option><option value="700">Taiti
-	          	  </option><option value="705">Tanzânia
-	          	  </option><option value="710">Tchad
-	          	  </option><option value="715">Tago
-	          	  </option><option value="720">Tonga Ilhas
-	          	  </option><option value="725">Trinidad e Tobago
-	          	  </option><option value="730">Tunísia
-	          	  </option><option value="735">Turquia
-	          	  </option><option value="740">Uganda
-	          	  </option><option value="745">Uruguai
-	          	  </option><option value="750">Venezuela
-	          	  </option><option value="755">Vietnam
-	          	  </option><option value="760">Wales
-	          	  </option><option value="765">República Democrática do Congo
-	          	  </option><option value="770">Zâmbia
-	          	  </option><option value="999">NÃO INFORMADO
-	          	  </option><option value="775">China
-	          	  </option><option value="624">República da Sérvia
-	          	  </option><option value="362">Hungria
-	          	  </option><option value="457">Lituânia
-	          	  </option><option value="642">Rússia
-	          	  </option><option value="711">Sérvia
-	          	  </option><option value="776">República da Croácia
-	          	  </option><option value="123">Burkina Faso
-	          	  </option><option value="853">Macau
-	          	  </option><option value="781">Togo
-	          	  </option><option value="831">Ucrânia
-	          	  </option><option value="790">Republique de Côte D'Ivoire
-	          	  </option><option value="631">República Tcheca
-	          	  </option><option value="780">Zimbábue
-	          	  </option><option value="27">Sri Lanka
-	          	  </option><option value="122">Lesoto
-				</option></select>
-			</td>
-			<td width="90" align="RIGHT"><font size="2">Sexo:</font>
-				<select name="Sexo" id="Sexo" onchange="this.options[0].selected = true;">
-					<option value="M" selected="">M 
-					</option><option value="F">F
-					 
-				</option></select>
-			</td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <!-- Curso -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="4">&nbsp;<b>Curso</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="30"><font size="2">&nbsp;Curso:&nbsp;</font></td>
+                                        <td align="LEFT"><input name="Nome_Curso" readonly="" size="60"
+                                                                type="Text" value="Mestrado em Física"></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="30"><font size="2">&nbsp;Título:&nbsp;</font></td>
+                                        <td align="LEFT"><input name="Titulo_Curso" readonly=""
+                                                                size="60"
+                                                                type="Text" value="Magister Scientiae em Física                                                                        "></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="30"><font size="2">&nbsp;Habilitação:&nbsp;</font></td>
+                                        <td align="LEFT"><input name="Habilitacao" readonly=""
+                                                                size="60"
+                                                                type="Text" value="                                                                                                    "></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<!-- CPF -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="2">&nbsp;<b>CPF</b></td>
-		</tr>
-		<tr>
-			<td width="70" align="RIGHT"><font size="2">Número:</font></td>
-			<td align="LEFT"><input type="Text" name="CPF" value="094.912.426-52" size="15" readonly="" id="CPF"></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <!-- Filiação -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="4">&nbsp;<b>Filiação</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="30"><font size="2">&nbsp;Pai:&nbsp;</font></td>
+                                        <td align="LEFT"><input name="Nome_Pai" readonly=""
+                                                                size="56" type="Text" value="João Vargas de Castro">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="30"><font size="2">&nbsp;Mãe:&nbsp;</font></td>
+                                        <td align="LEFT"><input id="Nome da mãe" name="Nome_Mae"
+                                                                readonly="" size="56"
+                                                                type="Text" value="Aparecida de Fátima Ângelo Castro"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<!-- Documento de Identidade -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="6">&nbsp;<b>Documento de Identidade</b></td>
-		</tr>
-		<tr>
-			<td width="70" align="RIGHT"><font size="2">Tipo:</font></td>
-			<td width="40" align="LEFT"><input type="Text" name="Ident_Tipo" value="CI" size="3" readonly="" id="Tipo do documento de identidade"></td>
-			<td width="170" align="RIGHT"><font size="2">Número:</font><input type="Text" name="Ident_Numero" value="MG-19.035.927  " size="13" readonly="" id="Número do documento de identidade"></td>
-			<td width="150" align="RIGHT"><font size="2">Órgao Exp.:</font><input type="Text" name="Ident_Orgao" value="PCMG" size="7" readonly="" id="Órgão expedidor do documento de identidade"></td>
-			<td width="115" align="RIGHT"><font size="2">UF:</font>
-				<select name="Ident_Estado" id="UF do documento de identidade" onchange="this.options[0].selected = true;">
-		        <option value="MG" selected="" readonly="">MG
-	          	  </option><option value="">
-	          	  </option><option value="AC">AC
-	          	  </option><option value="AL">AL
-	          	  </option><option value="AM">AM
-	          	  </option><option value="AP">AP
-	          	  </option><option value="BA">BA
-	          	  </option><option value="CE">CE
-	          	  </option><option value="DF">DF
-	          	  </option><option value="ES">ES
-	          	  </option><option value="GO">GO
-	          	  </option><option value="MA">MA
-	          	  </option><option value="MG">MG
-	          	  </option><option value="MS">MS
-	          	  </option><option value="MT">MT
-	          	  </option><option value="PA">PA
-	          	  </option><option value="PB">PB
-	          	  </option><option value="PE">PE
-	          	  </option><option value="PI">PI
-	          	  </option><option value="PR">PR
-	          	  </option><option value="RJ">RJ
-	          	  </option><option value="RN">RN
-	          	  </option><option value="RO">RO
-	          	  </option><option value="RR">RR
-	          	  </option><option value="RS">RS
-	          	  </option><option value="SC">SC
-	          	  </option><option value="SE">SE
-	          	  </option><option value="SP">SP
-	          	  </option><option value="TO">TO
-	          	  </option><option value="ZZ">ZZ
-				</option></select>
-			</td>
-			
-			<td width="155" align="RIGHT"><font size="2"><!--Emissão:--></font><input type="Hidden" name="Ident_Data" value="01/01/1900" size="10" readonly="" id=""></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <!-- Nascimento -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="5">&nbsp;<b>Nascimento</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="RIGHT" width="70"><font size="2">Data:</font></td>
+                                        <td align="LEFT" width="260"><input id="Data de nascimento" name="Data_Nascimento"
+                                                                            readonly="" size="10" type="Text"
+                                                                            value="06/09/1995"></td>
+                                        <td align="RIGHT" colspan="2" width="280"><font size="2">Cidade:</font><input
+                                                id="Local de nascimento" name="Local_Nascimento" readonly="" size="30"
+                                                type="Text" value="Carangola"></td>
+                                        <td align="RIGHT" width="90"><font size="2">UF:</font>
+                                            <select id="UF de nascimento" name="Estado_Nascimento"
+                                                    onchange="this.options[0].selected = true;">
+                                                <option selected="" value="MG">MG
+                                                </option>
+                                                <option value="">
+                                                </option>
+                                                <option value="AC">AC
+                                                </option>
+                                                <option value="AL">AL
+                                                </option>
+                                                <option value="AM">AM
+                                                </option>
+                                                <option value="AP">AP
+                                                </option>
+                                                <option value="BA">BA
+                                                </option>
+                                                <option value="CE">CE
+                                                </option>
+                                                <option value="DF">DF
+                                                </option>
+                                                <option value="ES">ES
+                                                </option>
+                                                <option value="GO">GO
+                                                </option>
+                                                <option value="MA">MA
+                                                </option>
+                                                <option value="MG">MG
+                                                </option>
+                                                <option value="MS">MS
+                                                </option>
+                                                <option value="MT">MT
+                                                </option>
+                                                <option value="PA">PA
+                                                </option>
+                                                <option value="PB">PB
+                                                </option>
+                                                <option value="PE">PE
+                                                </option>
+                                                <option value="PI">PI
+                                                </option>
+                                                <option value="PR">PR
+                                                </option>
+                                                <option value="RJ">RJ
+                                                </option>
+                                                <option value="RN">RN
+                                                </option>
+                                                <option value="RO">RO
+                                                </option>
+                                                <option value="RR">RR
+                                                </option>
+                                                <option value="RS">RS
+                                                </option>
+                                                <option value="SC">SC
+                                                </option>
+                                                <option value="SE">SE
+                                                </option>
+                                                <option value="SP">SP
+                                                </option>
+                                                <option value="TO">TO
+                                                </option>
+                                                <option value="ZZ">ZZ
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="RIGHT" width="70"><font size="2">País:</font></td>
+                                        <td align="LEFT" width="260">
+                                            <select id="País de nascimento" name="Pais_Nascimento"
+                                                    onchange="this.options[0].selected = true;">
+                                                <option selected="" value="000">Brasil
+                                                </option>
+                                                <option value="000">Brasil
+                                                </option>
+                                                <option value="005">Açores
+                                                </option>
+                                                <option value="010">Afeganistão
+                                                </option>
+                                                <option value="015">África do Sul
+                                                </option>
+                                                <option value="020">Alemanha
+                                                </option>
+                                                <option value="025">Alto Volta
+                                                </option>
+                                                <option value="030">Andorra
+                                                </option>
+                                                <option value="035">Angola
+                                                </option>
+                                                <option value="040">Antilhas Holandesas
+                                                </option>
+                                                <option value="045">Arábia Saudita
+                                                </option>
+                                                <option value="050">Argélia
+                                                </option>
+                                                <option value="055">Argentina
+                                                </option>
+                                                <option value="060">Austrália
+                                                </option>
+                                                <option value="065">Áustria
+                                                </option>
+                                                <option value="070">Bahamas
+                                                </option>
+                                                <option value="075">Bahrein
+                                                </option>
+                                                <option value="080">Bangladesh
+                                                </option>
+                                                <option value="085">Barbados
+                                                </option>
+                                                <option value="090">Bélgica
+                                                </option>
+                                                <option value="095">Belize
+                                                </option>
+                                                <option value="100">Benin
+                                                </option>
+                                                <option value="105">Bermuda
+                                                </option>
+                                                <option value="110">Birmania
+                                                </option>
+                                                <option value="115">Bolívia
+                                                </option>
+                                                <option value="120">Botsuana
+                                                </option>
+                                                <option value="125">Bulgária
+                                                </option>
+                                                <option value="130">Burundi
+                                                </option>
+                                                <option value="132">Cabo Verde
+                                                </option>
+                                                <option value="135">Ilhas Caimanes
+                                                </option>
+                                                <option value="140">Camarões
+                                                </option>
+                                                <option value="145">Camboja
+                                                </option>
+                                                <option value="150">Canadá
+                                                </option>
+                                                <option value="155">Ilhas Canárias
+                                                </option>
+                                                <option value="160">Ceilao
+                                                </option>
+                                                <option value="165">Chile
+                                                </option>
+                                                <option value="170">Chipre
+                                                </option>
+                                                <option value="175">Cingapura
+                                                </option>
+                                                <option value="180">Colômbia
+                                                </option>
+                                                <option value="185">Congo
+                                                </option>
+                                                <option value="190">Coréia do Norte
+                                                </option>
+                                                <option value="192">Coréia do Sul
+                                                </option>
+                                                <option value="195">Costa do Marfim
+                                                </option>
+                                                <option value="200">Costa Rica
+                                                </option>
+                                                <option value="205">Cuba
+                                                </option>
+                                                <option value="210">Daomé
+                                                </option>
+                                                <option value="215">Dinamarca
+                                                </option>
+                                                <option value="220">Egito
+                                                </option>
+                                                <option value="225">El Salvador
+                                                </option>
+                                                <option value="230">Emirados Árabes Unid
+                                                </option>
+                                                <option value="235">Equador
+                                                </option>
+                                                <option value="240">Escócia
+                                                </option>
+                                                <option value="245">Espanha
+                                                </option>
+                                                <option value="260">Estados Unidos da América
+                                                </option>
+                                                <option value="265">Etiópia
+                                                </option>
+                                                <option value="270">Fidji
+                                                </option>
+                                                <option value="275">Filipinas
+                                                </option>
+                                                <option value="280">Finlândia
+                                                </option>
+                                                <option value="285">Formosa
+                                                </option>
+                                                <option value="290">França
+                                                </option>
+                                                <option value="295">Gabão
+                                                </option>
+                                                <option value="300">Gâmbia
+                                                </option>
+                                                <option value="305">Gana
+                                                </option>
+                                                <option value="310">Grécia
+                                                </option>
+                                                <option value="320">Guatemala
+                                                </option>
+                                                <option value="325">Guiana
+                                                </option>
+                                                <option value="330">Guiana Francesa
+                                                </option>
+                                                <option value="335">Guine
+                                                </option>
+                                                <option value="340">Guiné-Bissau
+                                                </option>
+                                                <option value="345">Guine Equatorial
+                                                </option>
+                                                <option value="350">Haiti
+                                                </option>
+                                                <option value="352">Holanda
+                                                </option>
+                                                <option value="355">Honduras
+                                                </option>
+                                                <option value="771">Estônia
+                                                </option>
+                                                <option value="772">Eslovênia
+                                                </option>
+                                                <option value="360">Hong Kong
+                                                </option>
+                                                <option value="365">Ieman
+                                                </option>
+                                                <option value="370">Ieman do Sul
+                                                </option>
+                                                <option value="375">Índia
+                                                </option>
+                                                <option value="380">Indonésia
+                                                </option>
+                                                <option value="382">Inglaterra
+                                                </option>
+                                                <option value="385">Irã
+                                                </option>
+                                                <option value="390">Iraque
+                                                </option>
+                                                <option value="395">Irlanda
+                                                </option>
+                                                <option value="397">Irlanda do Norte
+                                                </option>
+                                                <option value="400">Islândia
+                                                </option>
+                                                <option value="405">Israel
+                                                </option>
+                                                <option value="410">Itália
+                                                </option>
+                                                <option value="415">Iugoslávia
+                                                </option>
+                                                <option value="420">Jamaica
+                                                </option>
+                                                <option value="425">Japão
+                                                </option>
+                                                <option value="430">Jordânia
+                                                </option>
+                                                <option value="435">Kuwait
+                                                </option>
+                                                <option value="440">Laos
+                                                </option>
+                                                <option value="445">Líbano
+                                                </option>
+                                                <option value="450">Libéria
+                                                </option>
+                                                <option value="455">Líbia
+                                                </option>
+                                                <option value="460">Luxemburgo
+                                                </option>
+                                                <option value="465">Madagascar
+                                                </option>
+                                                <option value="470">Malásia
+                                                </option>
+                                                <option value="475">Malawi
+                                                </option>
+                                                <option value="480">Mali
+                                                </option>
+                                                <option value="485">Malta
+                                                </option>
+                                                <option value="490">Marrocos
+                                                </option>
+                                                <option value="495">Mauricio
+                                                </option>
+                                                <option value="500">Mauritânia
+                                                </option>
+                                                <option value="505">México
+                                                </option>
+                                                <option value="510">Moçambique
+                                                </option>
+                                                <option value="515">Mongólia
+                                                </option>
+                                                <option value="520">Namibia
+                                                </option>
+                                                <option value="525">Nepal
+                                                </option>
+                                                <option value="530">Nicarágua
+                                                </option>
+                                                <option value="535">Niger
+                                                </option>
+                                                <option value="540">Nigéria
+                                                </option>
+                                                <option value="545">Noruega
+                                                </option>
+                                                <option value="550">Nova Guine
+                                                </option>
+                                                <option value="555">Nova Zelândia
+                                                </option>
+                                                <option value="560">Okinawa
+                                                </option>
+                                                <option value="565">Oman
+                                                </option>
+                                                <option value="570">Países Baixos
+                                                </option>
+                                                <option value="575">Panamá
+                                                </option>
+                                                <option value="580">Paquistão
+                                                </option>
+                                                <option value="585">Paraguai
+                                                </option>
+                                                <option value="590">Peru
+                                                </option>
+                                                <option value="595">Polônia
+                                                </option>
+                                                <option value="598">Porto Rico
+                                                </option>
+                                                <option value="600">Portugal
+                                                </option>
+                                                <option value="605">Qatar
+                                                </option>
+                                                <option value="610">Quênia
+                                                </option>
+                                                <option value="615">Reino Unido
+                                                </option>
+                                                <option value="620">República Centro-Afr
+                                                </option>
+                                                <option value="625">República Dominicana
+                                                </option>
+                                                <option value="630">República Popular da
+                                                </option>
+                                                <option value="632">São Tomé e Príncipe
+                                                </option>
+                                                <option value="635">Rodésia
+                                                </option>
+                                                <option value="640">Ruanda
+                                                </option>
+                                                <option value="650">Somoa Ocidental
+                                                </option>
+                                                <option value="655">Senegal
+                                                </option>
+                                                <option value="660">Serra Leoa
+                                                </option>
+                                                <option value="665">Síria
+                                                </option>
+                                                <option value="670">Suazilândia
+                                                </option>
+                                                <option value="675">Sudão
+                                                </option>
+                                                <option value="680">Suécia
+                                                </option>
+                                                <option value="685">Suíça
+                                                </option>
+                                                <option value="690">Suriname
+                                                </option>
+                                                <option value="695">Tailândia
+                                                </option>
+                                                <option value="700">Taiti
+                                                </option>
+                                                <option value="705">Tanzânia
+                                                </option>
+                                                <option value="710">Tchad
+                                                </option>
+                                                <option value="715">Tago
+                                                </option>
+                                                <option value="720">Tonga Ilhas
+                                                </option>
+                                                <option value="725">Trinidad e Tobago
+                                                </option>
+                                                <option value="730">Tunísia
+                                                </option>
+                                                <option value="735">Turquia
+                                                </option>
+                                                <option value="740">Uganda
+                                                </option>
+                                                <option value="745">Uruguai
+                                                </option>
+                                                <option value="750">Venezuela
+                                                </option>
+                                                <option value="755">Vietnam
+                                                </option>
+                                                <option value="760">Wales
+                                                </option>
+                                                <option value="765">República Democrática do Congo
+                                                </option>
+                                                <option value="770">Zâmbia
+                                                </option>
+                                                <option value="999">NÃO INFORMADO
+                                                </option>
+                                                <option value="775">China
+                                                </option>
+                                                <option value="624">República da Sérvia
+                                                </option>
+                                                <option value="362">Hungria
+                                                </option>
+                                                <option value="457">Lituânia
+                                                </option>
+                                                <option value="642">Rússia
+                                                </option>
+                                                <option value="711">Sérvia
+                                                </option>
+                                                <option value="776">República da Croácia
+                                                </option>
+                                                <option value="123">Burkina Faso
+                                                </option>
+                                                <option value="853">Macau
+                                                </option>
+                                                <option value="781">Togo
+                                                </option>
+                                                <option value="831">Ucrânia
+                                                </option>
+                                                <option value="790">Republique de Côte D'Ivoire
+                                                </option>
+                                                <option value="631">República Tcheca
+                                                </option>
+                                                <option value="780">Zimbábue
+                                                </option>
+                                                <option value="27">Sri Lanka
+                                                </option>
+                                                <option value="122">Lesoto
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td align="RIGHT" width="70"><font size="2">Nacionalidade:</font></td>
+                                        <td align="LEFT" width="210">
+                                            <select id="Nacionalidade" name="Nacionalidade"
+                                                    onchange="this.options[0].selected = true;">
+                                                <option selected="" value="000">Brasil
+                                                </option>
+                                                <option value="000">Brasil
+                                                </option>
+                                                <option value="005">Açores
+                                                </option>
+                                                <option value="010">Afeganistão
+                                                </option>
+                                                <option value="015">África do Sul
+                                                </option>
+                                                <option value="020">Alemanha
+                                                </option>
+                                                <option value="025">Alto Volta
+                                                </option>
+                                                <option value="030">Andorra
+                                                </option>
+                                                <option value="035">Angola
+                                                </option>
+                                                <option value="040">Antilhas Holandesas
+                                                </option>
+                                                <option value="045">Arábia Saudita
+                                                </option>
+                                                <option value="050">Argélia
+                                                </option>
+                                                <option value="055">Argentina
+                                                </option>
+                                                <option value="060">Austrália
+                                                </option>
+                                                <option value="065">Áustria
+                                                </option>
+                                                <option value="070">Bahamas
+                                                </option>
+                                                <option value="075">Bahrein
+                                                </option>
+                                                <option value="080">Bangladesh
+                                                </option>
+                                                <option value="085">Barbados
+                                                </option>
+                                                <option value="090">Bélgica
+                                                </option>
+                                                <option value="095">Belize
+                                                </option>
+                                                <option value="100">Benin
+                                                </option>
+                                                <option value="105">Bermuda
+                                                </option>
+                                                <option value="110">Birmania
+                                                </option>
+                                                <option value="115">Bolívia
+                                                </option>
+                                                <option value="120">Botsuana
+                                                </option>
+                                                <option value="125">Bulgária
+                                                </option>
+                                                <option value="130">Burundi
+                                                </option>
+                                                <option value="132">Cabo Verde
+                                                </option>
+                                                <option value="135">Ilhas Caimanes
+                                                </option>
+                                                <option value="140">Camarões
+                                                </option>
+                                                <option value="145">Camboja
+                                                </option>
+                                                <option value="150">Canadá
+                                                </option>
+                                                <option value="155">Ilhas Canárias
+                                                </option>
+                                                <option value="160">Ceilao
+                                                </option>
+                                                <option value="165">Chile
+                                                </option>
+                                                <option value="170">Chipre
+                                                </option>
+                                                <option value="175">Cingapura
+                                                </option>
+                                                <option value="180">Colômbia
+                                                </option>
+                                                <option value="185">Congo
+                                                </option>
+                                                <option value="190">Coréia do Norte
+                                                </option>
+                                                <option value="192">Coréia do Sul
+                                                </option>
+                                                <option value="195">Costa do Marfim
+                                                </option>
+                                                <option value="200">Costa Rica
+                                                </option>
+                                                <option value="205">Cuba
+                                                </option>
+                                                <option value="210">Daomé
+                                                </option>
+                                                <option value="215">Dinamarca
+                                                </option>
+                                                <option value="220">Egito
+                                                </option>
+                                                <option value="225">El Salvador
+                                                </option>
+                                                <option value="230">Emirados Árabes Unid
+                                                </option>
+                                                <option value="235">Equador
+                                                </option>
+                                                <option value="240">Escócia
+                                                </option>
+                                                <option value="245">Espanha
+                                                </option>
+                                                <option value="260">Estados Unidos da América
+                                                </option>
+                                                <option value="265">Etiópia
+                                                </option>
+                                                <option value="270">Fidji
+                                                </option>
+                                                <option value="275">Filipinas
+                                                </option>
+                                                <option value="280">Finlândia
+                                                </option>
+                                                <option value="285">Formosa
+                                                </option>
+                                                <option value="290">França
+                                                </option>
+                                                <option value="295">Gabão
+                                                </option>
+                                                <option value="300">Gâmbia
+                                                </option>
+                                                <option value="305">Gana
+                                                </option>
+                                                <option value="310">Grécia
+                                                </option>
+                                                <option value="320">Guatemala
+                                                </option>
+                                                <option value="325">Guiana
+                                                </option>
+                                                <option value="330">Guiana Francesa
+                                                </option>
+                                                <option value="335">Guine
+                                                </option>
+                                                <option value="340">Guiné-Bissau
+                                                </option>
+                                                <option value="345">Guine Equatorial
+                                                </option>
+                                                <option value="350">Haiti
+                                                </option>
+                                                <option value="352">Holanda
+                                                </option>
+                                                <option value="355">Honduras
+                                                </option>
+                                                <option value="771">Estônia
+                                                </option>
+                                                <option value="772">Eslovênia
+                                                </option>
+                                                <option value="360">Hong Kong
+                                                </option>
+                                                <option value="365">Ieman
+                                                </option>
+                                                <option value="370">Ieman do Sul
+                                                </option>
+                                                <option value="375">Índia
+                                                </option>
+                                                <option value="380">Indonésia
+                                                </option>
+                                                <option value="382">Inglaterra
+                                                </option>
+                                                <option value="385">Irã
+                                                </option>
+                                                <option value="390">Iraque
+                                                </option>
+                                                <option value="395">Irlanda
+                                                </option>
+                                                <option value="397">Irlanda do Norte
+                                                </option>
+                                                <option value="400">Islândia
+                                                </option>
+                                                <option value="405">Israel
+                                                </option>
+                                                <option value="410">Itália
+                                                </option>
+                                                <option value="415">Iugoslávia
+                                                </option>
+                                                <option value="420">Jamaica
+                                                </option>
+                                                <option value="425">Japão
+                                                </option>
+                                                <option value="430">Jordânia
+                                                </option>
+                                                <option value="435">Kuwait
+                                                </option>
+                                                <option value="440">Laos
+                                                </option>
+                                                <option value="445">Líbano
+                                                </option>
+                                                <option value="450">Libéria
+                                                </option>
+                                                <option value="455">Líbia
+                                                </option>
+                                                <option value="460">Luxemburgo
+                                                </option>
+                                                <option value="465">Madagascar
+                                                </option>
+                                                <option value="470">Malásia
+                                                </option>
+                                                <option value="475">Malawi
+                                                </option>
+                                                <option value="480">Mali
+                                                </option>
+                                                <option value="485">Malta
+                                                </option>
+                                                <option value="490">Marrocos
+                                                </option>
+                                                <option value="495">Mauricio
+                                                </option>
+                                                <option value="500">Mauritânia
+                                                </option>
+                                                <option value="505">México
+                                                </option>
+                                                <option value="510">Moçambique
+                                                </option>
+                                                <option value="515">Mongólia
+                                                </option>
+                                                <option value="520">Namibia
+                                                </option>
+                                                <option value="525">Nepal
+                                                </option>
+                                                <option value="530">Nicarágua
+                                                </option>
+                                                <option value="535">Niger
+                                                </option>
+                                                <option value="540">Nigéria
+                                                </option>
+                                                <option value="545">Noruega
+                                                </option>
+                                                <option value="550">Nova Guine
+                                                </option>
+                                                <option value="555">Nova Zelândia
+                                                </option>
+                                                <option value="560">Okinawa
+                                                </option>
+                                                <option value="565">Oman
+                                                </option>
+                                                <option value="570">Países Baixos
+                                                </option>
+                                                <option value="575">Panamá
+                                                </option>
+                                                <option value="580">Paquistão
+                                                </option>
+                                                <option value="585">Paraguai
+                                                </option>
+                                                <option value="590">Peru
+                                                </option>
+                                                <option value="595">Polônia
+                                                </option>
+                                                <option value="598">Porto Rico
+                                                </option>
+                                                <option value="600">Portugal
+                                                </option>
+                                                <option value="605">Qatar
+                                                </option>
+                                                <option value="610">Quênia
+                                                </option>
+                                                <option value="615">Reino Unido
+                                                </option>
+                                                <option value="620">República Centro-Afr
+                                                </option>
+                                                <option value="625">República Dominicana
+                                                </option>
+                                                <option value="630">República Popular da
+                                                </option>
+                                                <option value="632">São Tomé e Príncipe
+                                                </option>
+                                                <option value="635">Rodésia
+                                                </option>
+                                                <option value="640">Ruanda
+                                                </option>
+                                                <option value="650">Somoa Ocidental
+                                                </option>
+                                                <option value="655">Senegal
+                                                </option>
+                                                <option value="660">Serra Leoa
+                                                </option>
+                                                <option value="665">Síria
+                                                </option>
+                                                <option value="670">Suazilândia
+                                                </option>
+                                                <option value="675">Sudão
+                                                </option>
+                                                <option value="680">Suécia
+                                                </option>
+                                                <option value="685">Suíça
+                                                </option>
+                                                <option value="690">Suriname
+                                                </option>
+                                                <option value="695">Tailândia
+                                                </option>
+                                                <option value="700">Taiti
+                                                </option>
+                                                <option value="705">Tanzânia
+                                                </option>
+                                                <option value="710">Tchad
+                                                </option>
+                                                <option value="715">Tago
+                                                </option>
+                                                <option value="720">Tonga Ilhas
+                                                </option>
+                                                <option value="725">Trinidad e Tobago
+                                                </option>
+                                                <option value="730">Tunísia
+                                                </option>
+                                                <option value="735">Turquia
+                                                </option>
+                                                <option value="740">Uganda
+                                                </option>
+                                                <option value="745">Uruguai
+                                                </option>
+                                                <option value="750">Venezuela
+                                                </option>
+                                                <option value="755">Vietnam
+                                                </option>
+                                                <option value="760">Wales
+                                                </option>
+                                                <option value="765">República Democrática do Congo
+                                                </option>
+                                                <option value="770">Zâmbia
+                                                </option>
+                                                <option value="999">NÃO INFORMADO
+                                                </option>
+                                                <option value="775">China
+                                                </option>
+                                                <option value="624">República da Sérvia
+                                                </option>
+                                                <option value="362">Hungria
+                                                </option>
+                                                <option value="457">Lituânia
+                                                </option>
+                                                <option value="642">Rússia
+                                                </option>
+                                                <option value="711">Sérvia
+                                                </option>
+                                                <option value="776">República da Croácia
+                                                </option>
+                                                <option value="123">Burkina Faso
+                                                </option>
+                                                <option value="853">Macau
+                                                </option>
+                                                <option value="781">Togo
+                                                </option>
+                                                <option value="831">Ucrânia
+                                                </option>
+                                                <option value="790">Republique de Côte D'Ivoire
+                                                </option>
+                                                <option value="631">República Tcheca
+                                                </option>
+                                                <option value="780">Zimbábue
+                                                </option>
+                                                <option value="27">Sri Lanka
+                                                </option>
+                                                <option value="122">Lesoto
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td align="RIGHT" width="90"><font size="2">Sexo:</font>
+                                            <select id="Sexo" name="Sexo" onchange="this.options[0].selected = true;">
+                                                <option selected="" value="M">M
+                                                </option>
+                                                <option value="F">F
 
-<!-- Passaporte -->
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- CPF -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="2">&nbsp;<b>CPF</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="RIGHT" width="70"><font size="2">Número:</font></td>
+                                        <td align="LEFT"><input id="CPF" name="CPF" readonly="" size="15"
+                                                                type="Text" value="094.912.426-52"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Documento de Identidade -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="6">&nbsp;<b>Documento de Identidade</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="RIGHT" width="70"><font size="2">Tipo:</font></td>
+                                        <td align="LEFT" width="40"><input id="Tipo do documento de identidade" name="Ident_Tipo" readonly=""
+                                                                           size="3" type="Text"
+                                                                           value="CI"></td>
+                                        <td align="RIGHT" width="170"><font size="2">Número:</font><input id="Número do documento de identidade"
+                                                                                                          name="Ident_Numero"
+                                                                                                          readonly=""
+                                                                                                          size="13"
+                                                                                                          type="Text"
+                                                                                                          value="MG-19.035.927  ">
+                                        </td>
+                                        <td align="RIGHT" width="150"><font size="2">Órgao Exp.:</font><input
+                                                id="Órgão expedidor do documento de identidade" name="Ident_Orgao" readonly="" size="7" type="Text"
+                                                value="PCMG"></td>
+                                        <td align="RIGHT" width="115"><font size="2">UF:</font>
+                                            <select id="UF do documento de identidade" name="Ident_Estado"
+                                                    onchange="this.options[0].selected = true;">
+                                                <option readonly="" selected="" value="MG">MG
+                                                </option>
+                                                <option value="">
+                                                </option>
+                                                <option value="AC">AC
+                                                </option>
+                                                <option value="AL">AL
+                                                </option>
+                                                <option value="AM">AM
+                                                </option>
+                                                <option value="AP">AP
+                                                </option>
+                                                <option value="BA">BA
+                                                </option>
+                                                <option value="CE">CE
+                                                </option>
+                                                <option value="DF">DF
+                                                </option>
+                                                <option value="ES">ES
+                                                </option>
+                                                <option value="GO">GO
+                                                </option>
+                                                <option value="MA">MA
+                                                </option>
+                                                <option value="MG">MG
+                                                </option>
+                                                <option value="MS">MS
+                                                </option>
+                                                <option value="MT">MT
+                                                </option>
+                                                <option value="PA">PA
+                                                </option>
+                                                <option value="PB">PB
+                                                </option>
+                                                <option value="PE">PE
+                                                </option>
+                                                <option value="PI">PI
+                                                </option>
+                                                <option value="PR">PR
+                                                </option>
+                                                <option value="RJ">RJ
+                                                </option>
+                                                <option value="RN">RN
+                                                </option>
+                                                <option value="RO">RO
+                                                </option>
+                                                <option value="RR">RR
+                                                </option>
+                                                <option value="RS">RS
+                                                </option>
+                                                <option value="SC">SC
+                                                </option>
+                                                <option value="SE">SE
+                                                </option>
+                                                <option value="SP">SP
+                                                </option>
+                                                <option value="TO">TO
+                                                </option>
+                                                <option value="ZZ">ZZ
+                                                </option>
+                                            </select>
+                                        </td>
+
+                                        <td align="RIGHT" width="155"><font size="2"><!--Emissão:--></font><input
+                                                id="" name="Ident_Data" readonly="" size="10" type="Hidden"
+                                                value="01/01/1900"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Passaporte -->
 
 
-<!-- Título de Eleitor -->
+                    <!-- Título de Eleitor -->
 
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="4">&nbsp;<b>Título de Eleitor</b></td>
-		</tr><tr>
-			<td width="70" align="RIGHT"><font size="2">Número:</font></td>
-			<td width="130" align="LEFT"><input type="Text" name="TE_Numero" value="2035 4903 0213" size="15" readonly="" id="Número do título de eleitor"></td>
-<!--			
-			<td width="340" align="RIGHT"><font size="2">Zona:</font><input TYPE="Text" NAME="TE_Zona" VALUE="069" SIZE="4" readonly id="Zona do título de eleitor"></td>
-			<td width="160" align="RIGHT"><font size="2">Seção:</font><input TYPE="Text" NAME="TE_Secao" VALUE="033" SIZE="4" readonly id="Seção do título de eleitor"></td>
--->			
-		</tr>
-<!--			
-		<tr>
-			<td width="70" align="RIGHT"><font size="2">Emissão:</font></td>
-			<td width="130" align="LEFT"><input TYPE="Hidden" NAME="TE_Data" VALUE="01/01/1900" SIZE="10" readonly id=""></td>
-			<td width="340" align="RIGHT"><font size="2">Local:</font><input TYPE="Text" NAME="TE_Local" VALUE="Carangola" SIZE="36" readonly id="Local de emissão do título de eleitor"></td>
-			<td width="160" align="RIGHT"><font size="2">UF:</font>
-				<select NAME="TE_Estado" id="UF do título de eleitor" onChange="this.options[0].selected = true;">
-		        <option VALUE="MG" SELECTED>MG
-	          	  <option VALUE="">
-	          	  <option VALUE="AC">AC
-	          	  <option VALUE="AL">AL
-	          	  <option VALUE="AM">AM
-	          	  <option VALUE="AP">AP
-	          	  <option VALUE="BA">BA
-	          	  <option VALUE="CE">CE
-	          	  <option VALUE="DF">DF
-	          	  <option VALUE="ES">ES
-	          	  <option VALUE="GO">GO
-	          	  <option VALUE="MA">MA
-	          	  <option VALUE="MG">MG
-	          	  <option VALUE="MS">MS
-	          	  <option VALUE="MT">MT
-	          	  <option VALUE="PA">PA
-	          	  <option VALUE="PB">PB
-	          	  <option VALUE="PE">PE
-	          	  <option VALUE="PI">PI
-	          	  <option VALUE="PR">PR
-	          	  <option VALUE="RJ">RJ
-	          	  <option VALUE="RN">RN
-	          	  <option VALUE="RO">RO
-	          	  <option VALUE="RR">RR
-	          	  <option VALUE="RS">RS
-	          	  <option VALUE="SC">SC
-	          	  <option VALUE="SE">SE
-	          	  <option VALUE="SP">SP
-	          	  <option VALUE="TO">TO
-	          	  <option VALUE="ZZ">ZZ
-				</select>
-			</td>
-		</tr>
--->			
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="4">&nbsp;<b>Título de Eleitor</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="RIGHT" width="70"><font size="2">Número:</font></td>
+                                        <td align="LEFT" width="130"><input id="Número do título de eleitor" name="TE_Numero"
+                                                                            readonly="" size="15" type="Text"
+                                                                            value="2035 4903 0213"></td>
+                                        <!--
+                                                    <td width="340" align="RIGHT"><font size="2">Zona:</font><input TYPE="Text" NAME="TE_Zona" VALUE="069" SIZE="4" readonly id="Zona do título de eleitor"></td>
+                                                    <td width="160" align="RIGHT"><font size="2">Seção:</font><input TYPE="Text" NAME="TE_Secao" VALUE="033" SIZE="4" readonly id="Seção do título de eleitor"></td>
+                                        -->
+                                    </tr>
+                                    <!--
+                                            <tr>
+                                                <td width="70" align="RIGHT"><font size="2">Emissão:</font></td>
+                                                <td width="130" align="LEFT"><input TYPE="Hidden" NAME="TE_Data" VALUE="01/01/1900" SIZE="10" readonly id=""></td>
+                                                <td width="340" align="RIGHT"><font size="2">Local:</font><input TYPE="Text" NAME="TE_Local" VALUE="Carangola" SIZE="36" readonly id="Local de emissão do título de eleitor"></td>
+                                                <td width="160" align="RIGHT"><font size="2">UF:</font>
+                                                    <select NAME="TE_Estado" id="UF do título de eleitor" onChange="this.options[0].selected = true;">
+                                                    <option VALUE="MG" SELECTED>MG
+                                                        <option VALUE="">
+                                                        <option VALUE="AC">AC
+                                                        <option VALUE="AL">AL
+                                                        <option VALUE="AM">AM
+                                                        <option VALUE="AP">AP
+                                                        <option VALUE="BA">BA
+                                                        <option VALUE="CE">CE
+                                                        <option VALUE="DF">DF
+                                                        <option VALUE="ES">ES
+                                                        <option VALUE="GO">GO
+                                                        <option VALUE="MA">MA
+                                                        <option VALUE="MG">MG
+                                                        <option VALUE="MS">MS
+                                                        <option VALUE="MT">MT
+                                                        <option VALUE="PA">PA
+                                                        <option VALUE="PB">PB
+                                                        <option VALUE="PE">PE
+                                                        <option VALUE="PI">PI
+                                                        <option VALUE="PR">PR
+                                                        <option VALUE="RJ">RJ
+                                                        <option VALUE="RN">RN
+                                                        <option VALUE="RO">RO
+                                                        <option VALUE="RR">RR
+                                                        <option VALUE="RS">RS
+                                                        <option VALUE="SC">SC
+                                                        <option VALUE="SE">SE
+                                                        <option VALUE="SP">SP
+                                                        <option VALUE="TO">TO
+                                                        <option VALUE="ZZ">ZZ
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                    -->
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<!-- Dados Militares -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td colspan="5">&nbsp;<b>Serviço Militar</b></td>
-		</tr><tr>
-			<td width="80" align="LEFT"><font size="2">Tipo:</font></td>
-			<td width="70" align="LEFT"><input type="Text" name="SM_Tipo" value="CDI" size="4" readonly="" id="Tipo do documento militar"></td>
-			<td width="250" align="RIGHT"><font size="2">Número:</font><input type="Text" name="SM_Numero" value="813245" size="18" readonly="" id="Número do documento militar"></td>
-			<td width="120" align="RIGHT"><font size="2">Série:</font><input type="Text" name="SM_Serie" value="Z" size="1" readonly="">&nbsp;</td>
-			<td width="180" align="RIGHT"><font size="2"><!--Emissão:--></font><input type="hidden" name="SM_Data" value="" size="10" readonly="" id="">&nbsp;</td>
-		</tr>
-		<tr>
-			<td colspan="2" align="LEFT"><font size="2">Repartição:</font>&nbsp;<input type="Text" name="SM_Reparticao" value="D" size="4" readonly="" id="Repartição do documento militar"></td>
-			<td colspan="3" width="700" align="RIGHT"><font size="2">Observação:</font><input type="Text" name="SM_Observacao" value="RA 120382211270" size="55" readonly=""></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <!-- Dados Militares -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="5">&nbsp;<b>Serviço Militar</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" width="80"><font size="2">Tipo:</font></td>
+                                        <td align="LEFT" width="70"><input id="Tipo do documento militar" name="SM_Tipo" readonly=""
+                                                                           size="4" type="Text"
+                                                                           value="CDI"></td>
+                                        <td align="RIGHT" width="250"><font size="2">Número:</font><input id="Número do documento militar"
+                                                                                                          name="SM_Numero"
+                                                                                                          readonly=""
+                                                                                                          size="18"
+                                                                                                          type="Text"
+                                                                                                          value="813245">
+                                        </td>
+                                        <td align="RIGHT" width="120"><font size="2">Série:</font><input name="SM_Serie"
+                                                                                                         readonly=""
+                                                                                                         size="1"
+                                                                                                         type="Text"
+                                                                                                         value="Z">&nbsp;
+                                        </td>
+                                        <td align="RIGHT" width="180"><font size="2"><!--Emissão:--></font><input
+                                                id="" name="SM_Data" readonly="" size="10" type="hidden" value="">&nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="LEFT" colspan="2"><font size="2">Repartição:</font>&nbsp;<input
+                                                id="Repartição do documento militar" name="SM_Reparticao" readonly="" size="4" type="Text"
+                                                value="D"></td>
+                                        <td align="RIGHT" colspan="3" width="700"><font
+                                                size="2">Observação:</font><input name="SM_Observacao" readonly=""
+                                                                                  size="55" type="Text"
+                                                                                  value="RA 120382211270"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
-<!-- Escola de 2º Grau -->
-<br>
-<table width="700" border="1" cellspacing="0" cellpadding="0" bgcolor="#E1E1E1">
-<tbody><tr>
-	<td>
-		<table border="0" cellspacing="4" cellpadding="0">
-		<tbody><tr>
-			<td>&nbsp;<b>2º Grau</b></td>
-		</tr><tr>
-			<td><font size="2">Escola:&nbsp;</font><input type="text" name="ES_Nome" value="Escola Estadual &quot;Emília Esteves Marques&quot; - Carangola - MG" size="100" readonly="" id="Nome da escolar"></td>
-		</tr>
-		<tr>
-			<td><font size="2">Ano de Conclusão:&nbsp;</font><input type="Text" name="ES_Ano" value="31/12/2013" size="10" readonly="" id="Ano de conclusão"></td>
-		</tr>
-		</tbody></table>
-	</td>
-</tr>
-</tbody></table>
+                    <!-- Escola de 2º Grau -->
+                    <br>
+                    <table bgcolor="#E1E1E1" border="1" cellpadding="0" cellspacing="0" width="700">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table border="0" cellpadding="0" cellspacing="4">
+                                    <tbody>
+                                    <tr>
+                                        <td>&nbsp;<b>2º Grau</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font size="2">Escola:&nbsp;</font><input id="Nome da escolar" name="ES_Nome"
+                                                                                      readonly=""
+                                                                                      size="100" type="text"
+                                                                                      value="Escola Estadual &quot;Emília Esteves Marques&quot; - Carangola - MG"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font size="2">Ano de Conclusão:&nbsp;</font><input id="Ano de conclusão"
+                                                                                                name="ES_Ano"
+                                                                                                readonly=""
+                                                                                                size="10" type="Text"
+                                                                                                value="31/12/2013">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-<br>
-<!-- Botão Gravar -->
+                    <br>
+                    <!-- Botão Gravar -->
 
-</form>
-
-
-</td>
-</tr>
-</tbody></table>
+                </form>
 
 
+            </td>
+        </tr>
+        </tbody>
+    </table>
 
-</center></body></html>
+
+</center>
+</body>
+</html>
