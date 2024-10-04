@@ -1,69 +1,9 @@
-<!-- saved from url=(0066)https://sapiens.dti.ufv.br/sapiens/aluno/dpessoais.asp?n=524105251 -->
-<html><!-- Google tag (gtag.js) -->
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <script async="" src="./js"></script>
-
     <title>Sapiens - Sistema de Apoio ao Ensino Baseado na Internet</title>
     <link href="./estilo.css" rel="stylesheet" type="text/css">
-    <script language="JavaScript">
-        <!--
-
-        function aviso(acaoA) {
-            if (acaoA == '0') {
-                document.getElementById('PrimeiroAviso').style.display = 'none';
-                document.getElementById('Avisoinicial').style.display = '';
-                document.getElementById('Normal').style.display = 'none';
-            } else if (acaoA == '1') { //alert("acao e um")
-                var f3 = document.FormInicial
-//	  var f2 = document.formConfirmacao
-                if (!f3.leu.checked) {
-                    alert("Marque a opção de confirmação da leitura da mensagem acima antes de prosseguir !!!")
-                    return false
-                } else {
-                    document.getElementById('PrimeiroAviso').style.display = '';
-                    document.getElementById('Avisoinicial').style.display = 'none';
-                    document.getElementById('Normal').style.display = '';
-
-                }
-            }
-        }
-
-        function enviar() {
-            var f1 = document.formDados
-            var f2 = document.formConfirmacao
-            if (!f2.confirmacao.checked) {
-                alert("Marque a opção de confirmação antes de prosseguir !!!")
-                return false
-            }
-
-            if (f1.Pais_Nascimento.value != "000") {
-                f1.Estado_Nascimento.id = ""
-            }
-
-            //Verifica campos não preenchidos
-            mensagem = ""
-            for (i = 0; i < document.forms["formDados"].elements.length; i++) {
-                if (document.forms["formDados"].elements[i].value == "" && document.forms["formDados"].elements[i].id != "") {
-                    mensagem = mensagem + "- " + document.forms["formDados"].elements[i].id + "\n"
-                }
-            }
-            if (mensagem != "") {
-                mensagem = "Informações pendentes:\n" + mensagem + "\n Procure o Registro Escolar."
-                alert(mensagem)
-                return false
-            }
-
-            if (confirm("Confirma?") == false) {
-                return false
-            }
-
-            f2.acao.value = "confirmar"
-            f2.submit()
-        }
-
-        -->
-    </script>
 </head>
 
 <body onload="aviso(&#39;1&#39;)">
